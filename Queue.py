@@ -17,7 +17,7 @@ def InitialiseQueue():
 
 #Add Item to the Queue
 def Enqueue(NewItem):
-    if NumberInQueue < MAX_QUEUE_SIZE
+    if NumberInQueue < MAX_QUEUE_SIZE:
         EndOfQueuePointer = EndOfQueuePointer + 1
 
         if EndOfQueuePointer > MAX_QUEUE_SIZE - 1:

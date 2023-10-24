@@ -1,0 +1,34 @@
+tree = [TreeNode(None) for _ in range(100)]
+#INSERT NODES
+class TreeNode:
+    def __init__(self, data):
+        self.data = data
+        self.left_ptr = None
+        self.right_ptr = None
+
+def insert_node(new_item):
+    global root_ptr
+    global free_ptr
+    if free_ptr is not None:
+        new_node_ptr = free_ptr
+        free_ptr = tree[free_ptr].left_ptr
+        tree[new_node_ptr] = TreeNode(new_item)
+
+        if root_ptr is None:
+            root_ptr = new_node_ptr
+        else:
+            this_node_ptr = root_ptr
+            previous_node_ptr = None
+            turned_left = False
+            while this_node_ptr is not None:
+                previous_node_ptr = this_node_ptr
+                if new_item < tree[this_node_ptr].data:
+                    turned_left = True
+                    this_node_ptr = tree[this_node_ptr].left_ptr
+                else:
+                    turned_left = False
+                    this_node_ptr = tree[this_node_ptr].right_ptr
+            if turned_left:
+                tree[previous_node_ptr].left_ptr = new_node_ptr
+            else:
+                tree[previous_node_ptr].right_ptr = new_node_ptr

@@ -1,0 +1,11 @@
+class Vehicle:
+
+    def __init__(self, VehicleID="", Registration = "", DateOfRegistration = "", EngineSize = "", PurchasePrice=""):
+        self.VehicleID = VehicleID
+        self.Registration = Registration
+        self.DateOfRegistration = DateOfRegistration
+        self.EngineSize = EngineSize
+        self.PurchasePrice = PurchasePrice
+
+MyCar = Vehicle("PQH 4218", "Proton", "23/10/2023","1.6 CC", "RM60,000")
+print(MyCar.EngineSize)

@@ -13,4 +13,5 @@ for i in BinaryTree:
     if Search == BinaryTree[i]:
         print("Found")
         IsFound == True
-    elif Search > BinaryTree[i]
+    elif Search > BinaryTree[i]:
+        IsFound == False

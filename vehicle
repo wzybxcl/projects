@@ -1,3 +1,4 @@
+
 class Vehicle:
 
     def __init__(self, VehicleID="", Registration = "", DateOfRegistration = "", EngineSize = "", PurchasePrice=""):
@@ -8,4 +9,29 @@ class Vehicle:
         self.PurchasePrice = PurchasePrice
 
 MyCar = Vehicle("010001", "PQH 4218", "23/10/2023",1600, 60000.00)
-print(MyCar.EngineSize)
+
+Cars = [Vehicle() for i in range(100)]         
+
+
+
+class human:
+
+    def __init__(self, date_of_birth, nationality):
+        self.dob = date_of_birth
+        self.nationality = nationality
+        self.height = 0.0
+        self.weight = 0.0
+
+Zeyuan = human("12/34/5678","Malaysian")
+Zeyuan.height = 185
+Zeyuan.weight = 67
+
+print(Zeyuan.height)
+
+file = open("student.csv","w")
+file.write(data)[]
+file.close()
+
+JoWee = Vehicle()
+JoWee.VehicleID = "123456789"
+w

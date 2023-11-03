@@ -1,4 +1,5 @@
 
+"""
 class Vehicle:
 
     def __init__(self, VehicleID="", Registration = "", DateOfRegistration = "", EngineSize = "", PurchasePrice=""):
@@ -34,4 +35,5 @@ file.close()
 
 JoWee = Vehicle()
 JoWee.VehicleID = "123456789"
-w
+"""
+

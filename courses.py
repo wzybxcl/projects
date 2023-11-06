@@ -40,5 +40,5 @@ class Assessment(Courses):
     def OutputAssessmentDetails(self):
         Courses.OutputCourseDetails()
         print("Assessment Title:" + self.AssessmentTitle)
-        print("Max marks:" + self.MaxMarks)
+        print("Max marks:" + str(self.MaxMarks))
 

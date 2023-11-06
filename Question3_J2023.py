@@ -16,23 +16,45 @@ def PushAnimal(DataToPush):
         return True
 
 def PopAnimal():
-    ReturnData = None
     global AnimalTopPointer
     if AnimalTopPointer == 0:
-        return ReturnData
+        return ""
     else:
         ReturnData = Animal[AnimalTopPointer - 1]
         AnimalTopPointer -= 1
         return ReturnData
-
 def ReadData():
+    global AnimalTopPointer
+    global ColourTopPointer
     try:
         AnimelFile = open("AnimalData.txt", "r")
         for line in AnimelFile:
-            PushAnimal(line)
-        AnimelFile.close
+            PushAnimal(line.strip())
+        AnimelFile.close()
     except IOError:
         print("Please check if the file exists")
     
 def PushColour(DataToPush):
     global ColourTopPointer
+    if ColourTopPointer == 10:
+        return False
+    else:
+        ColourTopPointer.append(DataToPush)
+        ColourTopPointer += 1
+        return True
+    
+def PopColour():
+    global ColourTopPointer
+    if ColourTopPointer == 0:
+        return ""
+    else:
+        ReturnData = Colour[ColourTopPointer - 1]
+        ColourTopPointer -= 1
+        return ReturnData
+    
+def OutputItem():
+    global AnimalTopPointer
+    global ColourTopPointer
+    IsAnimalThere = PopAnimal()
+    IsColourThere = PopColour()
+    if IsColourThere == 

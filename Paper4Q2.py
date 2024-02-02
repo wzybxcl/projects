@@ -36,8 +36,8 @@ class Character:
             self.SetXPosition(-10)
 
 class BikeCharacter(Character):
-    def __init__(self, XPosition, YPosition, NameP):
-        super().__init__(XPosition, YPosition, NameP)
+    def __init__(self, name, XPosition, YPosition,):
+        super().__init__(name, XPosition, YPosition)
     
     def Move(self, Direction):
         if Direction.lower() == "up":
@@ -51,4 +51,6 @@ class BikeCharacter(Character):
 
 
 Jack = Character("Jack", 50, 50)
+
+Karla = BikeCharacter("Karla", 100, 50)
     

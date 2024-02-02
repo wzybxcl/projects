@@ -15,18 +15,40 @@ class Character:
         self.XPosition = self.XPosition + value
         if self.XPosition > 10000:
             self.XPosition = 10000
-        if self.XPosition < 0:
+        elif self.XPosition < 0:
             self.XPosition = 0
 
     def SetYPosition(self, value):
         self.YPosition = self.YPosition + value
         if self.YPosition > 10000:
             self.YPosition = 10000
-        if self.YPosition < 0:
+        elif self.YPosition < 0:
             self.YPosition = 0
 
     def Move(self, string):
-        if string == "up":
-            SetYPosition(self, 10)
-        if string == "down:"
-            SetYPosition(self, -10)
+        if string.lower() == "up":
+            self.SetYPosition(10)
+        elif string.lower() == "down":
+            self.SetYPosition(-10)
+        elif string.lower() == "right":
+            self.SetXPosition(10)
+        elif string.lower() == "left":
+            self.SetXPosition(-10)
+
+class BikeCharacter(Character):
+    def __init__(self, XPosition, YPosition, NameP):
+        super().__init__(XPosition, YPosition, NameP)
+    
+    def Move(self, Direction):
+        if Direction.lower() == "up":
+            super().SetYPosition(20)
+        if Direction.lower() == "down":
+            super().SetYPosition(-20)
+        if Direction.lower() == "right":
+            super().SetXPosition(20)
+        if Direction.lower() == "left":
+            super().SetXPosition(-20)
+
+
+Jack = Character("Jack", 50, 50)
+    

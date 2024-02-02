@@ -53,4 +53,19 @@ class BikeCharacter(Character):
 Jack = Character("Jack", 50, 50)
 
 Karla = BikeCharacter("Karla", 100, 50)
+
+name = input("Would you like to move Jack or Karla?").lower()
+while name not in ["jack", "karla"]:
+    name = input("Invalid try again")
+
+Direction = input("Which direction? Up, down, left or right?").lower()
+while Direction not in ["up","down", "left", "right"]:
+    Direction = input("Invalid try again: ").lower()
+
+if name == "jack":
+    Jack.Move(Direction)
+    print(f"Jack's new position is X = {Jack.GetX()}, Y = {Jack.GetY()}")
+else:
+    Karla.Move(Direction)
+    print(f"Karla's new position is X = {Karla.GetX()}, Y = {Karla.GetY()}")
     

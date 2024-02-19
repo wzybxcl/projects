@@ -43,7 +43,7 @@ class RecordData:
     def __init__(self, id, total):
         self.__ID = id   # string
         self.__Total =  total  #integer
-    
+    #stuff is private so create set/get methods
     def SetID(self, v):
         self.__ID = v
     def GetID(self):

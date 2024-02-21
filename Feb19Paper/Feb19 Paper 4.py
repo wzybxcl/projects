@@ -37,4 +37,19 @@ def Search(TheData):
 
 #Question 2
 
+class HiddenBox:
+    # __BoxName String
+    # __Creator String
+    # __DateHidden String
+    # __GameLocation String
+    # __LastFinds [10][2] String
+    # __Active String
+    def __init__(self, NewBoxName, NewCreator, NewDateHidden, NewLocation):
+        self.__BoxName = NewBoxName
+        self.__Creator = NewCreator
+        self.__DateHidden = NewDateHidden
+        self.__GameLocation = NewLocation
+        self.__LastFinds = [["" for j in range(0,2)] for i in range (0,10)]
+        self.__Active = False
 
+    

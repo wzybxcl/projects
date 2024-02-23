@@ -13,7 +13,7 @@ def IterativeVowels(Str):
         FirstCharacter = MID(Str, 0, 1)
         if FirstCharacter == 'a' or FirstCharacter == 'e' or FirstCharacter =='i' or FirstCharacter == 'o' or FirstCharacter == 'u':
             Total += 1
-        Str - MID(Str, 1, len(Str)-1)
+        Str = MID(Str, 1, len(Str)-1)
 
     return Total
 
